@@ -2,6 +2,7 @@ Architecture-Framework
 ======================
 
 This is an architecture framework written to run in [VPython](http://en.wikipedia.org/wiki/VPython).
+VPython is Python running is a special framework that enables 3D visualization.
 
 The basic concept is that you create boxes with appropriate dimensions to represent walls, windows, doors, decks.
 The framework saves you the trouble of computing offsets.
