@@ -9,19 +9,23 @@ For example, to make a 16' by 12' room with 8" walls you might say:
 
 ```Python
   deck = BoxThing( label = 'deck', length = 16*12, width = 12*12, height = 10, aColor = color.yellow )
-  
+
   wallThickness = 8
   wallHeight = 8*12
-  
-  backWall = BoxThing( label = 'back wall', length = wallThickness, width = deck.width, height = wallHeight, aColor = color.red )
+
+  backWall = BoxThing( label = 'back wall', length = wallThickness, width = deck.width, 
+                          height = wallHeight, aColor = color.red )
   backWall.placeSouthOf( deck, offset = 0 )
-  
-  frontWall = BoxThing( label = 'front wall', length = wallThickness, width = deck.width, height = wallHeight, aColor = color.red )
+
+  frontWall = BoxThing( label = 'front wall', length = wallThickness, width = deck.width, 
+                          height = wallHeight, aColor = color.red )
   frontWall.placeNorthOf( deck, offset = 0 )
-  
-  westWall = BoxThing ( label = 'west wall', length = deck.length, width = wallThickness, height = wallHeight, aColor = color.red )
+
+  westWall = BoxThing ( label = 'west wall', length = deck.length, width = wallThickness, 
+                          height = wallHeight, aColor = color.red )
   westWall.placeWestOf( deck )
-  
-  eastWall = BoxThing ( label = 'east wall', length = deck.length, width = wallThickness, height = wallHeight, aColor = color.red )
+
+  eastWall = BoxThing ( label = 'east wall', length = deck.length, width = wallThickness, 
+                          height = wallHeight, aColor = color.red )
   eastWall.placeEastOf( deck )
 ```
