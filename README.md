@@ -7,6 +7,7 @@ The basic concept is that you create boxes with appropriate dimensions to repres
 The framework saves you the trouble of computing offsets.
 For example, to make a 16' by 12' room with 8" walls you might say:
 
+```Python
   deck = BoxThing( label = 'deck', length = 16*12, width = 12*12, height = 10, aColor = color.yellow )
   
   wallThickness = 8
@@ -23,3 +24,4 @@ For example, to make a 16' by 12' room with 8" walls you might say:
   
   eastWall = BoxThing ( label = 'east wall', length = deck.length, width = wallThickness, height = wallHeight, aColor = color.red )
   eastWall.placeEastOf( deck )
+```
