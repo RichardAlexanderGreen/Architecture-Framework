@@ -1,7 +1,6 @@
 ## Trailer drawn using Thing.py --- Thing.py is Architecture Framework.
 
 from visual import *
-import Thing
 from Thing import BoxThing
 from Thing import PipeThing
 

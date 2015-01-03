@@ -86,7 +86,7 @@ class Thing:
         for child in self.children:
             child.draw()
             
-    
+
 class BoxThing( Thing ):
 
     _color = color.gray( 0.25 )
@@ -127,8 +127,8 @@ class BoxThing( Thing ):
         
         # I switch around the box dimensions -- so that coordinates are consistent with _ model
         self._View = box( length = self.width,  # X = East-West
-                     height = self.length,  # Y = North-South
-                     width = self.height,   # Z = Up-Down
+                     height = self.length,      # Y = North-South
+                     width = self.height,       # Z = Up-Down
                      pos = center,
                      visible = self.isVisible,
                      color = self._color,

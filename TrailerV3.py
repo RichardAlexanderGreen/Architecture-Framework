@@ -1,7 +1,6 @@
 ## Trailer drawn using Thing.py -- Thing.py is Architecture Framework.
 
 from visual import *
-import Thing
 from Thing import BoxThing
 from Thing import PipeThing
 
@@ -508,7 +507,7 @@ outAndBack = outsideCurve + list( reversed( insideCurve ) )
 
 curveBase = Polygon( outAndBack  )
 
-print "curveBase = " , curveBase
+#print "curveBase = " , curveBase
 
 lowerPoint = ( westWardrobe.westEdge, westWardrobe.northEdge, 0 )
 upperPoint = ( westWardrobe.westEdge, westWardrobe.northEdge, 4*12 )
