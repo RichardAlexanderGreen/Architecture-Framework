@@ -50,36 +50,30 @@ class Thing:
         self.children = set()
  
 
-    def placeAbove( self, parent, offset = 0.0 ):
-       #parent.children.add( self )
-        self.bottomEdge = parent.topEdge + offset + self.clearance
+    def placeAbove( self, other, offset = 0.0 ):
+        self.bottomEdge = other.topEdge + offset + self.clearance
         self.topEdge = self.bottomEdge + self.height
-        self.westEdge = parent.westEdge
+        self.westEdge = other.westEdge
         self.eastEdge = self.westEdge + self.width
 
-    def placeBelow( self, parent, offset = 0.0 ):
-       #parent.children.add( self )
-        self.topEdge = parent.bottomEdge - offset - self.clearance
+    def placeBelow( self, other, offset = 0.0 ):
+        self.topEdge = other.bottomEdge - offset - self.clearance
         self.bottomEdge = self.topEdge - self.height
 
-    def placeEastOf( self, parent, offset = 0.0 ):
-       #parent.children.add( self )
-        self.westEdge = parent.eastEdge + offset + self.clearance
+    def placeEastOf( self, other, offset = 0.0 ):
+        self.westEdge = other.eastEdge + offset + self.clearance
         self.eastEdge = self.westEdge + self.width
         
-    def placeWestOf( self, parent, offset = 0.0 ):
-       #parent.children.add( self )
-        self.eastEdge = parent.westEdge - offset - self.clearance
+    def placeWestOf( self, other, offset = 0.0 ):
+        self.eastEdge = other.westEdge - offset - self.clearance
         self.westEdge = self.eastEdge - self.width
         
-    def placeNorthOf( self, parent, offset = 0.0 ):
-       #parent.children.add( self )
-        self.southEdge = parent.northEdge + offset + self.clearance
+    def placeNorthOf( self, other, offset = 0.0 ):
+        self.southEdge = other.northEdge + offset + self.clearance
         self.northEdge = self.southEdge + self.length
         
-    def placeSouthOf( self, parent, offset = 0.0 ):
-       #parent.children.add( self )
-        self.northEdge = parent.southEdge - offset - self.clearance
+    def placeSouthOf( self, other, offset = 0.0 ):
+        self.northEdge = other.southEdge - offset - self.clearance
         self.southEdge = self.northEdge - self.length
 
     def drawChildren( self ):
